@@ -1,0 +1,25 @@
+.task-filter {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 1rem;
+    padding: 0 8px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    width: fit-content;
+}
+
+.task-select{
+    appearance: none;
+    border: none;
+    background: transparent;
+    font-size: large;
+    font-weight: 600;
+    color:#6b7280;
+}
+
+.task-select:focus{
+    outline: none;
+    border: none;
+}
