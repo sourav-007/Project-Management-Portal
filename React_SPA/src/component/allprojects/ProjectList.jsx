@@ -34,7 +34,7 @@ function ProjectList({ projects, setProjects }) {
         var model_json = {
          "collectionName": "projects"
          }
-         axios.post('http://localhost:3001/getAllDocuments',model_json)
+         axios.post('https://project-management-portal-eosin.vercel.app/getAllDocuments',model_json)
              .then((response) => {
                  setProjects(response.data);
              })
@@ -77,7 +77,7 @@ function ProjectList({ projects, setProjects }) {
             setProjectName(''); // Clear project name input
             setDescription(''); // Clear description input
             setShowInputs(false); // Hide the input fields after creating the project
-            axios.post('http://localhost:3001/insertDocument',Model_json)
+            axios.post('https://project-management-portal-eosin.vercel.app/insertDocument',Model_json)
             .then((response) => {
                 console.log(response);
             }
@@ -99,7 +99,7 @@ function ProjectList({ projects, setProjects }) {
                 "id": projectId
             }
         }
-        axios.post('http://localhost:3001/deleteDocument',model_json)
+        axios.post('https://project-management-portal-eosin.vercel.app/deleteDocument',model_json)
             .then((response) => {
                 console.log(response);
             })
@@ -126,7 +126,7 @@ function ProjectList({ projects, setProjects }) {
                         }
                     }
                 }
-                axios.post('http://localhost:3001/updateDocument',model_json)
+                axios.post('https://project-management-portal-eosin.vercel.app/updateDocument',model_json)
 
                 .then((response) => {
                     console.log(response);

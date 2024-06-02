@@ -43,7 +43,7 @@ function ProfilePage() {
                 "attribute": "email",
                 "value": localStorage.getItem('email')
             }
-        axios.post('http://localhost:3001/findDocuments', model_json)
+        axios.post('https://project-management-portal-eosin.vercel.app/findDocuments', model_json)
             .then((response) => {
                 setName(response.data[0].name);
                 setEmail(response.data[0].email);

@@ -34,7 +34,7 @@ function Task({ projects, setProjects }) {
         var model_json = {
          "collectionName": "tasks"
          }
-         axios.post('http://localhost:3001/getAllDocuments',model_json)
+         axios.post('https://project-management-portal-eosin.vercel.app/getAllDocuments',model_json)
              .then((response) => {
                 setTasks(response.data);
                 
@@ -46,7 +46,7 @@ function Task({ projects, setProjects }) {
              var model_json = {
                 "collectionName": "projects"
                 }
-                axios.post('http://localhost:3001/getAllDocuments',model_json)
+                axios.post('https://project-management-portal-eosin.vercel.app/getAllDocuments',model_json)
                     .then((response) => {
                         setAllProjects(response.data);
                        

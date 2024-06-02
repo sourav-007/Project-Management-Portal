@@ -8,7 +8,7 @@ function Bar() {
     var model_json = {
      "collectionName": "tasks"
      }
-     axios.post('http://localhost:3001/getAllDocuments',model_json)
+     axios.post('https://project-management-portal-eosin.vercel.app/getAllDocuments',model_json)
          .then((response) => {
             setBar({
               series: [{
