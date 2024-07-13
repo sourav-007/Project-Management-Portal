@@ -29,7 +29,7 @@ function Home() {
         var model_json = {
          "collectionName": "projects"
          }
-         axios.post('https://project-management-portal-eosin.vercel.app/getAllDocuments',model_json)
+         axios.post('http://localhost:3001/getAllDocuments',model_json)
              .then((response) => {
                 setTotalProjects(response.data.length);
              })
@@ -44,7 +44,7 @@ function Home() {
             var model_json = {
              "collectionName": "tasks"
              }
-             axios.post('https://project-management-portal-eosin.vercel.app/getAllDocuments',model_json)
+             axios.post('http://localhost:3001/getAllDocuments',model_json)
                  .then((response) => {
                     setTotalTasks(response.data.length);
                  })
@@ -60,7 +60,7 @@ function Home() {
                 var model_json = {
                  "collectionName": "Users"
                  }
-                 axios.post('https://project-management-portal-eosin.vercel.app/getAllDocuments',model_json)
+                 axios.post('http://localhost:3001/getAllDocuments',model_json)
                      .then((response) => {
                         setTotalMembers(response.data.length);
                      })

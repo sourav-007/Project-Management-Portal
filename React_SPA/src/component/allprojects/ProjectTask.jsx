@@ -32,7 +32,7 @@ function ProjectTask({ projects, setProjects }) {
         var model_json = {
          "collectionName": "projects"
          }
-         axios.post('https://project-management-portal-eosin.vercel.app/getAllDocuments',model_json)
+         axios.post('http://localhost:3001/getAllDocuments',model_json)
              .then((response) => {
                  setProjects(response.data);
              })
@@ -79,7 +79,7 @@ function ProjectTask({ projects, setProjects }) {
             "attribute": "project",
             "value": projectId
         }
-            axios.post('https://project-management-portal-eosin.vercel.app/findDocuments',model_json)
+            axios.post('http://localhost:3001/findDocuments',model_json)
                 .then((response) => {
                     setTasks(response.data);
                     console.log(response.data);
@@ -118,7 +118,7 @@ function ProjectTask({ projects, setProjects }) {
                 "document": newTask
                 }
 
-            axios.post('https://project-management-portal-eosin.vercel.app/insertDocument',Model_json)
+            axios.post('http://localhost:3001/insertDocument',Model_json)
                 .then((response) => {
                     console.log(response);
                 }
@@ -151,7 +151,7 @@ function ProjectTask({ projects, setProjects }) {
                 "id": taskId
             }
         }
-        axios.post('https://project-management-portal-eosin.vercel.app/deleteDocument',model_json)
+        axios.post('http://localhost:3001/deleteDocument',model_json)
             .then((response) => {
                 console.log(response);
             })

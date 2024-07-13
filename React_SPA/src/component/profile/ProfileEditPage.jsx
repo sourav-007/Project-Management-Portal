@@ -42,7 +42,7 @@ function ProfileEditPage() {
                 "attribute": "email",
                 "value": localStorage.getItem('email')
             }
-        axios.post('https://project-management-portal-eosin.vercel.app/findDocuments', model_json)
+        axios.post('http://localhost:3001/findDocuments', model_json)
             .then((response) => {
                 setName(response.data[0].name);
                 setEmail(response.data[0].email);
@@ -76,7 +76,7 @@ function ProfileEditPage() {
                             }
         }
     
-        axios.post('https://project-management-portal-eosin.vercel.app/updateDocument', model_json2)
+        axios.post('http://localhost:3001/updateDocument', model_json2)
             .then((response) => {
                 console.log(response.data);
                 navigate('/dash/profile');
